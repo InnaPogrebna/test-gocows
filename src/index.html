@@ -2,44 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/styles/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <title>Minimo</title>
   </head>
+
   <body>
-    <div class="page">
+    <div class="container">
       <header class="header-wrapper">
-        <div class="header">
-          <div class="container">
-            <span class="header-pseudo">
-              <span class ="header-title">
-                top antivirus
-              </span>
-            </span>
-            <span class="header-text">pc app store™</span>
-          </div>
-    
-        </div>
+        <a href="#" class="logo">
+          <img src="./images/logo.png" class="logo__img" alt="Logo">
+        </a>
+        <nav class="nav">
+          <ul class="nav__wrap">
+            <li class="nav__list">
+              <a href="./page1.html" target="_blank" class="nav__list-link">
+                page1
+              </a>
+            </li>
+            <li class="nav__list">
+              <a href="./page2.html" target="_blank" class="nav__list-link">
+                page2
+              </a>
+            </li>
+            <li class="nav__list">
+              <a href="./page3.html" target="_blank" class="nav__list-link">
+                page3
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <main>
-        <div class="container">
-          <h1 class="title">thank you for choosing our product !</h1>
-          <ul class="cards"></ul>
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="footer-wrapper">
-          <span class="header-title">top antivirus</span>
-          <span class="footer-text">Copyright © 2021 </span>
-        </div>
-      </footer>
+      <div class="link-wrapper">
+        <a class="link" href="./page1.html" target="_blank">
+          <span class="link__text">Page-1</span>
+          <img class="link__img" src="./images/main/01_homepage.jpg" alt="img1" />
+        </a>
+        <a class="link" href="./page2.html" target="_blank">
+          <span class="link__text">Page-2</span>
+          <img class="link__img" src="./images/main/02_post-full-width.jpg" alt="img2" />
+        </a>
+        <a class="link" href="./page3.html" target="_blank">
+          <span class="link__text">Page-3</span>
+          <img class="link__img" src="./images/main/03_post-sidebar.jpg" alt="img3" />
+        </a>
+      </div>
     </div>
-    <script type="text/javascript" src="../src/scripts/script.js"></script>
   </body>
+
 </html>

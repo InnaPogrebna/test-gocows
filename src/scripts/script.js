@@ -1,122 +1,22 @@
 'use strict';
 
-// eslint-disable-next-line no-undef
-const dataUrl = fetch('https://myjson.dit.upm.es/api/bins/ckb3');
+const sliderImg = document.querySelector('.slider');
+let currentImageIndex = 1;
 
-dataUrl
-  .then(response => response.json())
-  .then((data) => {
-    const arr = data.result.elements;
+setInterval(function moveSlider() {
+  setTimeout(function clear() {
+    sliderImg.classList.remove('move');
+  }, 2000);
 
-    arr.map((item) => createCard(item));
-  });
+  currentImageIndex++;
 
-const list = document.querySelector('.cards');
-const page = document.querySelector('.page');
-
-function createCard(data) {
-  const li = document.createElement('li');
-
-  li.insertAdjacentHTML('beforeend', `
-      <div class="card">
-        <div class="price-wrapper">
-          <div class="price">
-            <p class="amount">$${data.amount}</p>
-            <span class="amount-index">/${genIndexAmount(data)}</span>
-          </div>
-          ${amountHTML(data)}
-        </div>
-        <div class="name-prod-wrapper">
-          <span class="name-prod">${data.name_prod}</span>
-          <span class="license-name">${data.license_name}</span>
-          <button class="btn-download"
-          >
-            <a class="btn-download-link" 
-              href=${data.link}
-            >
-          Download
-          </a>
-        </button>
-        </div>
-        ${getSale(data)}
-        ${getMinAmount(data)}
-      </div>
-    `);
-  list.appendChild(li);
-
-  [...document.querySelectorAll('.btn-download')].forEach(btn => {
-    btn.addEventListener('click', () => {
-      download();
-    });
-  });
-}
-
-function genIndexAmount(data) {
-  if (data.amount_html) {
-    return 'mo';
+  if (currentImageIndex <= 4) {
+    sliderImg.classList.remove(`slider__${currentImageIndex - 1}`);
+    sliderImg.classList.add('move', `slider__${currentImageIndex}`);
   }
 
-  return 'per year';
-};
-
-function amountHTML(data) {
-  if (data.amount_html) {
-    return `<span class="amount-sale">${data.amount_html.split(' ')[0]}</span>`;
-  } else {
-    return ``;
+  if (currentImageIndex >= 4) {
+    currentImageIndex = 1;
+    sliderImg.classList.add('move');
   }
-};
-
-function getSale(data) {
-  if (data.amount_html) {
-    return `<div class="sale"></div>`;
-  } else {
-    return ``;
-  }
-}
-
-function getMinAmount(data) {
-  if (data.is_best) {
-    return `
-        <div class="best-value">
-          <span class="best-value-text">best value</span>
-        </div>
-      `;
-  } else {
-    return ``;
-  }
-}
-
-function download() {
-  const arrow = document.createElement('div');
-
-  if (navigator.userAgent.indexOf('Firefox') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-          <div class="arrowFirefox">
-          </div>
-        `);
-  } else if (navigator.userAgent.indexOf('Chrome') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-        <div class="arrowChrome">
-        </div>
-      `);
-  }
-
-  if (navigator.userAgent.indexOf('Firefox') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-        <div class="arrowFirefox">
-        </div>
-      `);
-  } else if (navigator.userAgent.indexOf('Chrome') !== -1) {
-    arrow.insertAdjacentHTML('beforeend', `
-      <div class="arrowChrome">
-      </div>
-    `);
-  }
-
-  page.append(arrow);
-
-  setTimeout(() => {
-    arrow.style.visibility = 'hidden';
-  }, 4000);
-};
+}, 4000);
