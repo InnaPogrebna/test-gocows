@@ -1,0 +1,68 @@
+.cards {
+  height: 435px;
+  background-color: #f0f0f0;
+  margin: 50px -25%;
+  overflow-x: hidden;
+  position: relative;
+
+  @media (max-width: 1439px) {
+    margin: 50px -10%;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 50px -5%;
+  }
+
+  @media (max-width: 640px) {
+    height: max-content;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+    margin: auto;
+
+    &-cards {
+      display: flex;
+      gap: 45px;
+
+      @media (max-width: 640px) {
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
+
+    &-text {
+      @extend %Ubuntu-Light;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #b4ad9e;
+      text-align: start;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+  }
+}
+
+.card {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__img {
+    width: 270px;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  &__text {
+    @extend %PlayfairDisplay-Regular;
+    color: #626262;
+    font-size: 20px;
+  }
+}

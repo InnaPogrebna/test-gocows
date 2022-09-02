@@ -1,0 +1,90 @@
+.content {
+  display: flex;
+  gap: 45px;
+
+  &__main {
+    width: fit-content;
+  }
+
+  &__banner {
+    width: 290px;
+    height: max-content;
+    margin-right: -80px;
+    position: sticky;
+    top: 0;
+    margin-top: 100px;
+
+    @media (max-width: 1439px) {
+      margin-right: -60px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-right: -40px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 640px) {
+      margin-right: -20px;
+      margin-top: 20px;
+    }
+    &-title {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+    &-text {
+      width: inherit;
+      font-size: 12px;
+      line-height: 20px;
+      margin-top: 20px;
+      margin-bottom: 22px;
+    }
+
+    &-img {
+      width: 280px;
+    }
+
+    &-socials {
+      display: flex;
+      gap: 15px;
+    }
+
+    &-block-list {
+      margin: 75px 0;
+    }
+
+    &-block-list-title {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    &-block-list-comment {
+      font-size: 12px;
+    }
+
+    &-block-list-text {
+      font-size: 16px;
+      margin-bottom: 16px;
+      margin-top: 30px;
+    }
+  }
+}
+
+.banner-text {
+  @extend %PlayfairDisplay-Regular;
+  color: #626262;
+}
+
+.list-text {
+  @extend %Ubuntu-Light;
+  text-transform: uppercase;
+  color: #b4ad9e;
+}
+
+li::marker {
+  color: #b4ad9e;
+}
+
+ul {
+  margin-left: 15px;
+}

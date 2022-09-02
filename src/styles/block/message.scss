@@ -1,0 +1,62 @@
+.message {
+  &__title {
+    margin-bottom: 44px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 39px;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 55px;
+    }
+
+    &-content {
+      width: 100%;
+    }
+
+    &-content-name {
+      @extend %PlayfairDisplay-Bold;
+      color: #626262;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    &-content-text {
+      @extend %PlayfairDisplay-Regular;
+      font-size: 14px;
+      line-height: 24px;
+      color: #626262;
+      margin-bottom: 28px;
+    }
+
+    &-content-reply {
+      cursor: pointer;
+    }
+
+    &-input {
+      width: 100%;
+      padding: 25px;
+      @extend %Ubuntu-Light;
+      text-transform: uppercase;
+      color: #626262;
+      font-size: 14px;
+      border: 1px solid #c8c8c8;
+      border-radius: 4px;
+
+      &::placeholder {
+        color: #c8c8c8;
+      }
+    }
+  }
+}
+
+.content-text {
+  @extend %Ubuntu-Light;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #b4ad9e;
+}

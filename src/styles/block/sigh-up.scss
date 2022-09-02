@@ -1,0 +1,52 @@
+.sign-up {
+  height: 290px;
+  background-color: #f0f0f0;
+  margin: 50px -70px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 1439px) {
+    margin: 50px -50px;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 30px -40px;
+  }
+
+  @media (max-width: 640px) {
+    margin: 20px -20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    @extend %PlayfairDisplay-Regular;
+    font-size: 30px;
+    color: #333;
+  }
+
+  &__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+  }
+}
+
+.sign-up__input-wrapper::before {
+  content: url("../images/send.png");
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 28px;
+}

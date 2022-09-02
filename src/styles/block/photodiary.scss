@@ -1,0 +1,47 @@
+.photodiary {
+  margin-top: 100px;
+
+  @media (max-width: 1439px) {
+    margin-top: 60px;
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 20px;
+  }
+
+  &__block {
+    &-name {
+      @extend %Ubuntu-Light;
+      font-size: 14px;
+      color: #b4ad9e;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      @extend %PlayfairDisplay-Regular;
+      font-size: 30px;
+      margin-top: 40px;
+      color: #626262;
+
+      @media (max-width: 640px) {
+        margin-top: 20px;
+      }
+    }
+
+    &-text {
+      margin-top: 50px;
+      @extend %PlayfairDisplay-Regular;
+      font-size: 14px;
+      color: #626262;
+      line-height: 24px;
+
+      @media (max-width: 640px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

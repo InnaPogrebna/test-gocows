@@ -1,0 +1,41 @@
+body {
+  height: 100%;
+}
+
+.page {
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 1200px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 70px;
+
+  @media (max-width: 1024px) {
+    padding: 40px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 20px;
+  }
+}
+
+.main-wrapper {
+  margin: 0 80px;
+  @media (max-width: 1439px) {
+    margin: 0 60px;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0 40px;
+  }
+
+  @media (max-width: 640px) {
+    margin: 0 20px;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+}

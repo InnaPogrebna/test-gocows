@@ -1,0 +1,68 @@
+.comment {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    width: 425px;
+
+    &-img-wrapper {
+      width: 100%;
+      margin-top: 100px;
+
+      @media (max-width: 1024px) {
+        margin-top: 40px;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 285px;
+      object-fit: cover;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &-name {
+      @extend %Ubuntu-Light;
+      font-size: 14px;
+      color: #b4ad9e;
+      text-transform: uppercase;
+      padding-top: 50px;
+
+      @media (max-width: 1024px) {
+        padding-top: 25px;
+      }
+    }
+
+    &-title {
+      @extend %PlayfairDisplay-Regular;
+      font-size: 30px;
+      margin-top: 30px;
+      color: #626262;
+
+      @media (max-width: 640px) {
+        margin-top: 20px;
+      }
+    }
+
+    &-text {
+      height: 75px;
+      width: 100%;
+      line-height: 24px;
+      @extend %PlayfairDisplay-Regular;
+      font-size: 14px;
+      margin-top: 30px;
+      color: #626262;
+
+      @media (max-width: 640px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

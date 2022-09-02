@@ -1,0 +1,48 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 20px;
+  &__img {
+    width: 120px;
+    height: 20px;
+  }
+}
+
+.nav__wrap {
+  display: flex;
+  gap: 140px;
+  list-style: none;
+  cursor: pointer;
+
+  @media (max-width: 1439px) {
+    gap: 120px;
+  }
+
+  @media (max-width: 1024px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 20px;
+  }
+}
+
+.nav__list {
+  @extend %PlayfairDisplay-Regular;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &-link {
+    color: #626262;
+  }
+}

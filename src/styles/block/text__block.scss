@@ -1,0 +1,20 @@
+.text__block {
+  margin-top: 50px;
+
+  &-italic-text {
+    @extend %PlayfairDisplay-Italic;
+    font-style: italic;
+    padding: 0 20px;
+  }
+
+  &-regular-text {
+    @extend %PlayfairDisplay-Regular;
+    margin-top: 40px;
+  }
+}
+
+.text {
+  color: #626262;
+  font-size: 14px;
+  line-height: 24px;
+}

@@ -1,0 +1,72 @@
+/* stylelint-disable no-descending-specificity */
+
+.footer {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  margin: 0 -15%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -70px;
+
+  @media (max-width: 1439px) {
+    margin-bottom: -50px;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0 -5%;
+    margin-bottom: -40px;
+  }
+
+  @media (max-width: 640px) {
+    margin-bottom: -20px;
+  }
+
+  &__rules {
+    margin: 40px 0 47px 130px;
+
+    a {
+      @extend %PlayfairDisplay-Regular;
+      color: #626262;
+      padding: 0 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+
+  &__socials {
+    margin: 35px 70px 47px 0;
+    align-items: center;
+    cursor: pointer;
+
+    &-icon a {
+      @extend %PlayfairDisplay-Regular;
+      color: #626262;
+      padding: 0 10px;
+      vertical-align: middle;
+      cursor: pointer;
+
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+}
+
+a svg {
+  width: 20px;
+  height: 20px;
+  background-size: 30px;
+  fill: #626262;
+  transition: all 0.4s ease;
+
+  &:hover {
+    fill: #333;
+    transform: scale(1.1);
+  }
+}
