@@ -44,7 +44,16 @@
   },
   "dependencies": {
     "fetch": "^1.1.0",
+    "fs-utils": "^0.7.0",
     "no": "0.0.1",
     "node-fetch": "^3.2.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InnaPogrebna/test-gocows.git"
+  },
+  "bugs": {
+    "url": "https://github.com/InnaPogrebna/test-gocows/issues"
+  },
+  "homepage": "https://github.com/InnaPogrebna/test-gocows#readme"
 }

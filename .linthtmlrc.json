@@ -25,7 +25,6 @@
   "tag-bans": ["b", "i", "u", "center", "style", "marquee", "font", "s"],
   "tag-name-lowercase": true,
   "tag-name-match": true,
-  "tag-close": true,
   "text-ignore-regex": "&",
   "title-no-dup": true,
   "line-end-style": "lf",
